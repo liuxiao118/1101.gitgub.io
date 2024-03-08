@@ -1,0 +1,155 @@
+网站简介：
+
+这个航天主题的网页旨在为广大用户提供关于航天领域的最新资讯、科普知识、历史回顾和未来展望。通过精选的内容和多媒体资源，让用户了解航天技术的最新进展，并探索宇宙的奥秘。我们将不断更新内容，致力于让用户获得更全面、深入的航天主题信息。
+
+设计思路如下：
+
+1. 页面布局和样式
+
+使用HTML和CSS构建页面结构，同时整体网页选取深色作为背景，营造宇宙的神秘感。
+
+布局中包括头部（导航栏）、主体内容区域（文章、图片、视频等）和页脚（版权信息、联系方式等）。并且为了使网页不显得枯燥，乏味，采用了宇航员、地球、航天器件技术等元素的图片，突出我们航天主题。确保用户在浏览网站信息的同时还可以欣赏到宇宙的宏伟感。科技感设计：采用简洁、现代的设计元素，突出科技感和未来感。
+
+使用CSS样式来美化页面，如添加过渡效果、阴影等。
+
+2. 交互性内容
+
+使用JavaScript添加点击事件，当用户点击特定内容时展开更多信息或跳转到相关页面。
+
+3. 动态效果
+
+利用JavaScript和CSS创建悬停效果，如鼠标悬停在图片上时自动放大。
+
+实现选项卡切换功能，展示不同的航天类产品，使用JavaScript控制选项卡的显示和隐藏。
+
+添加时间轴组件，使用JavaScript和CSS制作时间轴动画，展示航天历史发展。
+
+利用轮播图将网页分为四个部分，还利用了window全局对象并在其基础上新开一个窗口便于用户浏览。
+
+4. 简洁明了的设计
+
+保持页面布局清晰简洁，避免过多的视觉噪音。
+
+使用语义化的HTML标签和清晰的CSS类名来提高代码可读性和可维护性。
+
+确保网站在不同屏幕尺寸和设备上响应良好，使用媒体查询实现响应式设计。
+
+5.CSS重置:
+
+使用\* { box-sizing: border-box; }确保了所有元素的边框和内边距不会增加元素的总宽度Slider布局
+
+6.字体导入:
+
+使用@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700);导入了Open Sans字体，这是一种常用的无衬线字体，适合大多数设计场景。
+
+亮点之处：
+
+1利用JavaScript代码，实现用于控制一个图片滑动器。代码的功能主要包括：
+
+每10秒自动切换到下一张图片。
+
+通过点击缩略图来切换到对应的图片。以达到好的视觉交互效果
+
+代码如下：
+
+// 选择.slider下的.list内的.item元素，并存储在items变量中
+
+let items = document.querySelectorAll('.slider .list .item');
+
+// 选择.thumbnail下的.item元素，并存储在thumbnails变量中
+
+let thumbnails = document.querySelectorAll('.thumbnail .item');
+
+// 每10秒自动点击next按钮，实现自动轮播效果
+
+let refreshInterval = setInterval(() =\> {
+
+next.click();
+
+}, 10000);
+
+// 定义showSlider函数，用于展示滑动效果
+
+function showSlider(){
+
+// 查找当前激活的.slider下的.list内的.item元素和.thumbnail下的.item元素
+
+let itemActiveOld = document.querySelector('.slider .list .item.active');
+
+let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+
+// 移除这两个元素的激活状态样式
+
+itemActiveOld.classList.remove('active');
+
+thumbnailActiveOld.classList.remove('active');
+
+// 激活新的项目和缩略图
+
+items[itemActive].classList.add('active'); // items[itemActive]是激活的项，假设itemActive是一个表示当前激活项的变量
+
+thumbnails[itemActive].classList.add('active'); // 同样，假设itemActive是一个表示当前激活项的变量
+
+// 清除自动轮播定时器，并重新设置定时器以进行下一次轮播
+
+clearInterval(refreshInterval); // 清除之前的定时器
+
+refreshInterval = setInterval(() =\> { // 重新设置定时器以进行下一次轮播
+
+next.click();
+
+}, 10000); // 每10秒执行一次
+
+}
+
+// 为每个缩略图添加点击事件监听器，当点击时更新激活项并展示滑动效果
+
+thumbnails.forEach((thumbnail, index) =\> { // 对每个缩略图进行遍历
+
+thumbnail.addEventListener('click', () =\> { // 当缩略图被点击时
+
+itemActive = index; // 更新激活项的索引为当前缩略图的索引
+
+showSlider(); // 展示滑动效果
+
+}); // 结束事件监听器定义
+
+}); // 结束forEach循环
+
+1. 利用选项卡形成分类相册：
+
+利用JavaScript代码首先获取所有具有类名"tab"的元素，这些元素代表标签页的内容。
+
+接着，它会遍历这些内容，并将它们全部隐藏（即不显示）。然后，它会查找ID与tabName相匹配的标签页内容，并将其显示出来。
+
+给用户提供了一种直观的方式来浏览和切换内容。在空间有限的环境中，使用选项卡可以减少内容的显示空间，同时确保用户可以轻松地找到他们感兴趣的部分
+
+为网页提供一种强大且灵活的方式来组织和展示内容，提高用户体验和交互性。
+
+3.使用了Bootstrap，一个流行的前端框架
+
+在宇航员们这个页面中使用了Bootstrap和JavaScript来控制图片的切换。并且使用了一些自定义样式它包含一个加载器、一个导航栏和一个图片轮播效果。其中在容器中使用了一个.container-fluid类，这是Bootstrap的一个类，用于创建一个响应式的容器，其宽度会根据屏幕大小动态调整。
+
+然后用代码实现了加载器显示一个简单的加载动画的功能，最后幻灯片这部分有一个图片轮播效果可以看到有5个不同的图片，每个图片都有一个导航点。当用户点击这些导航点时，可能会触发图片的切换效果。
+
+1. 时间轴的交互：
+
+利用forEach 函数遍历所有选中的元素。对于每一个这样的元素（这里我们称之为 box），都会执行提供的函数。并对其添加事件监听器：
+
+对于每一个 box 元素，代码添加了两个事件监听器：一个用于 mouseenter 事件，另一个用于 mouseleave 事件。
+
+当鼠标指针进入 box 元素时（即触发 mouseenter 事件），visible 类会被添加到 box 元素，从而改变其样式或呈现方式。
+
+当鼠标指针离开 box 元素时（即触发 mouseleave 事件），visible 类会被从 box 元素移除，恢复其原始样式或呈现方式。
+
+不足之处：
+
+网页后期可以集成后端服务（可能需要Node.js、数据库等）来收集和分析用户浏览数据。
+
+使用JavaScript发送AJAX请求获取用户推荐内容，并动态更新页面，根据用户行为和偏好调整页面布局和内容展示。还可以添加表单元素和验证，允许用户注册账户、提交评论。
+
+技术支持：
+
+队伍：1103队
+
+队员：赵飞燕 向清桃 王爽
