@@ -18,16 +18,18 @@
 
         header {
             background-image: url(../images/h1.jpg);
+            background-size: cover;
+            background-position: center top 1%;
+            /* 将背景图片向下偏移10px */
             color: #fff;
             text-align: center;
             width: 100%;
-            height: 400px;
+            height: 40vh;
+            max-height: 400px;
         }
 
-        .content {
-            display: flex;
-            
-        }
+
+
 
         h1,
         h2 {
@@ -35,15 +37,53 @@
             margin: 20px 0;
         }
 
-        p {
-            line-height: 1.6;
-            padding: 0 20px;
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
         }
 
         img {
-            display: block;
-            /* margin: 20px auto; */
             max-width: 100%;
+            height: auto;
+        }
+
+        p {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+
+
+        p {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 20px;
         }
     </style>
 </head>
@@ -56,9 +96,9 @@
         <h2>航天科普知识</h2>
         <hr>
         <h3 style="margin-left: 140px;">空间站里的航天员怎么理发?最新画面来了!</h3>
-        
+
         <div class="content">
-            
+
 
             <p style="width: 500px; height: 300px; margin-left: 140px;">
                 经常有人问，在空间站长期生活的航天员如何理发。关于这个问题，聂海胜早在神舟十二号任务时就给出了答案，当时他旁边坐着的是汤洪波。
@@ -95,7 +135,7 @@
             <p style="width: 500px; height: 300px; margin-left: 140px;">
                 目前火箭发射有三种方式：一是地面发射，二是空中发射，三是海上发射。
                 地面发射场发射：早期，运送有效载荷的火箭都是从地面发射场发射的。地面发射场受地理位置的制约，限制了有效载荷的发射范围，
-                 难以满足各种有效载荷的需求，于是出现了从空中发射和从海上平台发射火箭的方式。
+                难以满足各种有效载荷的需求，于是出现了从空中发射和从海上平台发射火箭的方式。
             </p>
             <img src="../images2/fsfs.png" style="width: 400px;height: 300px;">
         </div>

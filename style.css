@@ -147,7 +147,7 @@ body {
   display: flex;
   gap: 10px;
   width: 100%;
-  height: 250px;
+  height: 40vh;
   padding: 0 50px;
 
   box-sizing: border-box;
@@ -160,11 +160,12 @@ body {
 }
 
 .thumbnail .item {
-  width: 150px;
-  height: 220px;
+  width: 15%;
+  height: 36vh;
   filter: brightness(.5);
   transition: .5s;
   flex-shrink: 0;
+  padding: 1%;
 }
 
 .thumbnail .item img {
@@ -180,7 +181,10 @@ body {
 
 .thumbnail .item .content {
   position: absolute;
-  inset: auto 10px 10px 10px;
+  inset: auto 10px 10px 30px;
+  font-size: 1.5vw;
+  
+  
 }
 
 @media screen and (max-width: 678px) {

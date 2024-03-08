@@ -7,10 +7,26 @@
     background-repeat: no-repeat;
 }
 
-body {
-    background-image: url(../images/15.png);
 
+      
+   body {  
+    /* 背景图像路径 */  
+    background-image: url(../images/15.png);  
+      
+    /* 背景图像固定定位，不随页面滚动 */  
+    background-attachment: fixed;  
+      
+    /* 背景图像不重复 */  
+    background-repeat: no-repeat;  
+      
+    /* 背景图像填充整个容器 */  
+    background-size: cover ;  
+      
+    /* 背景图像居中显示 */  
+    background-position: center top 1%
 }
+    
+
 
 * {
     text-size-adjust: none;
@@ -18,7 +34,7 @@ body {
     color: #fff;
     list-style: none;
     transition: all 0s ease 0s;
-    font-size: 12px;
+    font-size: 1vw;
 
 }
 
@@ -117,9 +133,10 @@ dl {
 
 .tablink {
     background-color: #000708;
-    width: 200px;
-    height: 50px;
-    margin-left: 80px;
+    width: 15%;
+    height: 6vh;
+    max-height: 50px;
+    margin-left: 3%;
     display: inline-block;
     font-size: larger;
     opacity: 70%;
