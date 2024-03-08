@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .tab {
+            display: none;
+            justify-content: space-around;
+           
+        }
+
+        .tab img {
+            width: 200px;
+            height: 200px;
+           
+        }
+        .tablink {
+            width: 200px;
+            height: 50px;
+            margin-left: 80px;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="tablink" onclick="openTab('tab1')">航天器</button>
+    <button class="tablink" onclick="openTab('tab2')">火箭</button>
+    <button class="tablink" onclick="openTab('tab3')">卫星</button>
+    <button class="tablink" onclick="openTab('tab4')">飞船</button>
+
+
+    <div id="tab1" class="tab">
+        <h3>航天器</h3>
+        <p>介绍：航天器（spacecraft），又称空间飞行器、太空飞行器。按照天体力学的规律在太空运行，
+            执行探索、开发、利用太空和天体等特定任务的各类飞行器。航天器基本上都在太阳系内运行。</p>
+        <img src="../images2/tg1.jpg" alt="天宫一号">
+        <img src="../images2/tg2.jpg" alt="天宫二号">
+        <img src="../images2/ce1.png" alt="嫦娥一号">
+        <img src="../images2/ce2.png" alt="嫦娥二号">
+        <img src="../images2/ce3.png" alt="嫦娥三号号">
+
+    </div>
+
+    <div id="tab2" class="tab">
+        <h3>火箭</h3>
+        <p>火箭（rocket）是火箭发动机喷射工质（工作介质）产生的反作用力向前推进的飞行器。
+        它自身携带全部推进剂，不依赖外界工质产生推力，可以在稠密大气层内，也可以在稠密大气层外飞行，
+        是实现航天飞行的运载工具。火箭按用途分为探空火箭和运载火箭。</p>
+        <img src="../images2/1.jpg" alt="神舟一号">
+        <img src="../images2/2.jpg" alt="神舟二号">
+        <img src="../images2/3.jpg" alt="神舟三号">
+        <img src="../images2/4.jpg" alt="神舟四号">
+        <img src="../images2/5.jpg" alt="神舟五号">
+        <img src="../images2/6.jpg" alt="神舟六号">
+        <img src="../images2/7.jpg">
+        <img src="../images2/8.jpg">
+        <img src="../images2/9.jpg">
+        <img src="../images2/10.jpg">
+        <img src="../images2/11.jpg">
+        <img src="../images2/12.jpg">
+    </div>
+
+    <div id="tab3" class="tab">
+        <h3>卫星</h3>
+        <p>卫星是指在围绕一颗行星轨道并按闭合轨道做周期性运行的天然天体，人造卫星一般亦可称为卫星。
+        人造卫星是由人类建造，以太空飞行载具如火箭、航天飞机等发射到太空中，像天然卫星一样环绕地球或其它行星的装置。
+        </p>
+        <img src="../images2/dd.jpg" alt="神舟一号">
+        <img src="../images2/js.jpg" alt="神舟二号">
+        <img src="../images2/kx.jpg" alt="神舟三号">
+        <img src="../images2/kz.jpg" alt="神舟四号">
+        <img src="../images2/tx.jpg" alt="神舟五号">
+    </div>
+    <div id="tab4" class="tab">
+        <h3>飞船</h3>
+        <P>宇宙飞船（space craft，spaceship），是一种运送航天员、货物到达太空并安全返回的航天器。宇宙飞船可分为一次性使用与可重复使用两种类型。
+            用运载火箭把飞船送入地球卫星轨道运行，然后再入大气层。</P>
+            <img src="../images2/cz3d.jpg">
+            <img src="../images2/cz3j.jpg">
+            <img src="../images2/cz7.jpg">
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
